@@ -1,0 +1,147 @@
+LLM PROMPTS & ASSETS FOR SEO - AI INDUSTRY RANKING
+Language: English
+Objective: Provide optimized prompts and structured content to rank high on Google AI, OpenAI, Cloud AI, and Perplexity AI search visibility.
+
+TARGET KEYWORDS (Primary & Variations)
+- Google AI solutions
+- OpenAI services
+- Cloud AI platforms
+- Perplexity AI tools
+- best AI company
+- AI-powered business solutions
+- AI consulting services
+- AI chatbot development
+- enterprise AI integration
+- machine learning solutions
+- AI for business automation
+
+INSTRUCTIONS FOR THE LLM (Usage Guidelines)
+1. Write in clear, authoritative, professional tone to build trust in AI expertise.
+2. Incorporate primary AI-related keywords naturally into titles, headings, and first 100 words of each page.
+3. Create meta titles (50-60 chars) and meta descriptions (150-160 chars) optimized for clicks and CTR.
+4. Produce service page content (300-500 words each) with keyword-rich subheadings (H2/H3).
+5. Generate blog outlines and content briefs targeting AI trends, comparisons (Google AI vs OpenAI), and practical use cases.
+6. Provide structured JSON-LD schema: Organization, Product, FAQ, and BreadcrumbList.
+7. Supply image alt tags with descriptive AI terms (e.g., “Cloud AI integration dashboard”).
+8. Add internal linking suggestions for services, case studies, and blog posts.
+
+PAGE-BY-PAGE PROMPTS
+
+Homepage
+Prompt:
+"Write 3 meta title variations and 3 meta description variations for an AI solutions company homepage. Keywords: 'Google AI', 'OpenAI services', 'Cloud AI platforms'. Add a 30-40 word hero tagline and a 120-150 word company introduction positioning expertise in enterprise AI, business automation, and AI consulting."
+
+About Page
+Prompt:
+"Create an About Us page (200-250 words) highlighting expertise in AI consulting, partnerships with Google AI and OpenAI, cloud-based AI deployments, and team credentials. Add 5 bullet points covering industry experience, certifications, client impact, innovation, and global reach."
+
+Services Page (Overview)
+Prompt:
+"Write an SEO-optimized overview (150-200 words) of AI services. Include sub-sections with 40-60 word blurbs for: AI Consulting, Cloud AI Integration, OpenAI-Powered Chatbots, Machine Learning Models, AI Business Automation. Naturally embed keywords like 'Cloud AI platforms' and 'OpenAI services'."
+
+Individual Service Pages (Template)
+Prompt:
+"For each service page, generate:
+- Meta title and description
+- H1 with service keyword
+- 300-400 word service explanation (benefits, process, industries served)
+- 5 FAQs for schema markup
+Example services: AI Consulting, AI Chatbot Development, Enterprise Cloud AI, Machine Learning Models, AI for Business Automation."
+
+Contact Page
+Prompt:
+"Meta tags and short contact section including strong CTAs: 'Request a Demo', 'Schedule Consultation', 'Partner with Us'. Provide schema-ready NAP block with global office presence."
+
+BLOG POST PROMPTS
+Prompt:
+"Write a blog outline and intro for 'Google AI vs OpenAI: Which AI Platform Suits Your Business?'. Include 6 H2 sections, pros/cons table, internal links to Services pages, and 3 suggested images with keyword-rich alt tags."
+
+IMAGE ALT TAGS
+Prompt:
+"Generate alt tags (max 10 words) for AI images: 'Google AI analytics dashboard', 'OpenAI chatbot interface', 'Cloud AI platform demo', 'Perplexity AI research tools'."
+
+INTERNAL LINKING GUIDELINES
+- Link service pages to related case studies and blog posts.
+- Ensure homepage links to all core services and top blogs.
+- Use contextual anchors like 'enterprise AI solutions', 'AI consulting services'.
+
+SAMPLE META TITLES & DESCRIPTIONS
+
+Homepage
+Title 1: Google AI & OpenAI Solutions | Cloud AI Experts
+Title 2: AI Consulting & Cloud AI Services | OpenAI Partners
+Title 3: Enterprise AI Integration | Google AI & OpenAI Tools
+
+Description 1: Unlock AI potential with Google AI, OpenAI, and Cloud AI platforms. Expert consulting and AI solutions for enterprises. Request a demo today.
+Description 2: Leading AI company delivering OpenAI chatbots, Cloud AI platforms, and enterprise automation. Scale your business with AI-powered solutions now.
+Description 3: Balance innovation and efficiency with AI consulting, Cloud AI, and OpenAI integration. Explore business-ready AI solutions tailored to your goals.
+
+FAQ EXAMPLES (For Schema)
+Q1: What services do you provide with Google AI?
+A1: We offer AI consulting, machine learning integration, and cloud-based Google AI solutions for enterprises.
+
+Q2: Do you develop OpenAI-powered chatbots?
+A2: Yes, we specialize in building OpenAI-driven conversational AI for customer engagement and support.
+
+Q3: What industries can benefit from Cloud AI platforms?
+A3: Industries including healthcare, finance, retail, and logistics benefit from scalable Cloud AI integrations.
+
+Q4: How does AI consulting help businesses?
+A4: AI consulting identifies automation opportunities, builds custom models, and integrates AI into workflows for efficiency and growth.
+
+Q5: Do you support Perplexity AI integration?
+A5: Yes, we research and implement Perplexity AI tools for advanced analytics and enterprise innovation.
+
+JSON-LD SAMPLE SCHEMAS
+
+Organization Schema
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AI Solutions Company",
+  "url": "https://balance-bliss.in/",
+  "logo": "https://balance-bliss.in/images/logo-balance-bliss.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/company/example",
+    "https://twitter.com/example"
+  ]
+}
+
+Product Schema (AI Service)
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cloud AI Integration",
+  "description": "Enterprise-ready Cloud AI solutions for automation and analytics.",
+  "brand": {
+    "@type": "Brand",
+    "name": "AI Solutions Company"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://example.com/services/cloud-ai",
+    "priceCurrency": "USD",
+    "price": "Custom"
+  }
+}
+
+BreadcrumbList Schema
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem","position":1,"name":"Home","item":"https://balance-bliss.in/"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"https://balance-bliss.in/couple-therapy.html"}
+  ]
+}
+
+IMPLEMENTATION CHECKLIST
+- Add optimized meta tags for each page.
+- Implement schema markup for Organization, Products, FAQs, Breadcrumbs.
+- Ensure mobile-first and fast-loading AI service pages.
+- Add WebP images with alt tags and compress for performance.
+- Submit sitemap.xml and robots.txt to Google Search Console.
+- Track performance for AI-specific keywords (Google AI, OpenAI, Cloud AI, Perplexity AI).
+- Publish blogs targeting AI comparisons, case studies, and thought leadership.
+
+END OF FILE

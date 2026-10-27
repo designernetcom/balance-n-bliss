@@ -1,0 +1,87 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+$error = "";
+
+if (!isset($_POST['name']) || $_POST['name'] == "") {
+    $error .= "\nName is required";
+} else {
+    if (!preg_match('/^[a-zA-Z\s]*$/', $_POST['name'])) {
+        $error .= "\nEnter valid Name";
+    }
+}
+
+if (!isset($_POST['email']) || $_POST['email'] == "") {
+    $error .= " \nEmail Id is required";
+} else {
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $error .= " \nEnter valid Email Id";
+    }
+}
+
+if (!isset($_POST['message']) || $_POST['message'] == "" || trim($_POST['message']) == "") {
+    $error .= " \nMessage is required";
+}
+
+if ($error == "") {
+    extract($_POST);
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPAuth = true;
+        $mail->Username   = 'netcomenquiry@gmail.com'; 
+        $mail->Password   = 'lorxmjvbuvbepuqp';   
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+
+        // Prepare the main email (to yourself)
+        $message_body = "<html><body><table border=5px>";
+        $message_body .= "<tr><td colspan='2' style='color : #C50B33; font-size : 20px; '><b>Request For Contact Form</b></td></tr>";
+        $message_body .= "<tr><td>Contact's Full Name : </td><td>" . $_POST['name'] . "</td></tr>";
+        $message_body .= "<tr><td>Contact's Email : </td><td>" . $_POST['email'] . "</td></tr>";
+        $message_body .= "<tr><td>Contact's Number : </td><td>" . $_POST['phone'] . "</td></tr>";
+        $message_body .= "<tr><td>Contact's Message : </td><td>" . $_POST['message'] . "</td></tr>";
+        $message_body .= "</table></body></html>";
+
+        $mail->setFrom('contact@balance-bliss.in', 'Balance Bliss');
+        $mail->addAddress('anivira1999@gmail.com'); // Your email
+        $mail->addAddress('contact@balance-bliss.in'); 
+        $mail->Subject = 'Balance Bliss - New Contact Request';
+        $mail->isHTML(true);
+        $mail->Body = $message_body;
+
+        // Send first email (to yourself)
+        if ($mail->send()) {
+            echo "** Thank you for reaching out to us. We will contact you soon. ** ";
+        } else {
+            echo "Sorry, error occurred while sending form details. ";
+        }
+
+        // Clear all recipients for next email
+        $mail->clearAllRecipients();
+
+        // Send thank you email to user
+        $mail->addAddress($_POST['email']);  // User's email
+        $mail->Subject = 'Balance Bliss - Thank You';
+        $mail->isHTML(true);
+        $mail->Body = "<html><body><h2>Thank you for contacting Balance Bliss!</h2><p>We have received your message and will get back to you shortly.</p></body></html>";
+
+        if ($mail->send()) {
+            echo "";
+        } else {
+            echo "Error sending thank you email to user.";
+        }
+    } catch (Exception $e) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    }
+} else {
+    echo $error;
+}
+?>

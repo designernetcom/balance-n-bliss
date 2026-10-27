@@ -1,0 +1,4 @@
+User-agent: * 
+Allow: /
+
+Sitemap: https://balance-bliss.in/sitemap.xml
